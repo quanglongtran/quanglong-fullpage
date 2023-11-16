@@ -1,0 +1,43 @@
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.navigator {
+    position: fixed;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &-item {
+        width: 20px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        &.active &-dot {
+            width: 12px;
+            height: 12px;
+        }
+
+        &:hover &-dot {
+            width: 10px;
+            height: 10px;
+            transition-property: all;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 250ms;
+        }
+
+        &-dot {
+            background-image: linear-gradient(
+                269.06deg,
+                #ffc93e -3.45%,
+                #f9a11a 104.6%
+            );
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+        }
+    }
+}
